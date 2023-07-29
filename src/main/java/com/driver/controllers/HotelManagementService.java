@@ -12,43 +12,30 @@ import java.util.List;
 @Service
 public class HotelManagementService {
 
+    HotelManagementRepository hotelManagementRepository = new HotelManagementRepository();
 
-    HotelManagementRepository repository=new HotelManagementRepository();
+    public String addHotel(Hotel hotel){
+        return hotelManagementRepository.addHotel(hotel);
+    }
 
-    public String addHotel(Hotel hotel)
-    {
-         if(hotel == null)
-         {
-             return "FAILURE";
-         }
-         else if(hotel.getHotelName() == null)
-         {
-             return "FAILURE";
-         }
-         else
-         {
-             return repository.addHotel(hotel.getHotelName(),hotel,hotel.getFacilities());
-         }
+    public Integer addUser(User user){
+        return hotelManagementRepository.addUser(user);
     }
-    public Integer addUser(User user)
-    {
-        return repository.addUser(user.getaadharCardNo(),user);
+
+    public String getHotelWithMostFacilities(){
+        return hotelManagementRepository.getHotelWithMostFacilities();
     }
-    public String getHotelWithMostFacilities()
-    {
-        return repository.getHotelWithMostFacilities();
+
+    public int bookARoom(Booking booking){
+        return hotelManagementRepository.bookARoom(booking);
     }
-    public int bookARoom(Booking obj)
-    {
-        String id = obj.getBookingId();
-        return repository.bookARoom(id,obj);
+
+    public int getBookings(Integer aadharCard) {
+        return hotelManagementRepository.getBookings(aadharCard);
     }
-    public int getBookings(int aadharCard)
-    {
-        return repository.getBookings(aadharCard);
+
+    public Hotel updateFacilities(List<Facility> newFacilities, String hotelName){
+        return hotelManagementRepository.updateFacilities(newFacilities, hotelName);
     }
-    public Hotel updateFacilities(List<Facility> newFacilities, String hotelName)
-    {
-        return repository.updateFacilities(newFacilities,hotelName);
-    }
+
 }

@@ -20,25 +20,26 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+			<version>3.1.0</version>
 		</dependency>
 
 		<dependency>
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-swagger2</artifactId>
-			<version>2.9.2</version>
+			<version>3.0.0</version>
 		</dependency>
 
 		<dependency>
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-swagger-ui</artifactId>
-			<version>2.9.2</version>
+			<version>3.0.0</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
-			<version>2.5.0</version>
+			<version>3.1.0</version>
 		</dependency>
 		<dependency>
 			<groupId>com.h2database</groupId>
@@ -48,6 +49,7 @@
 		<dependency>
 			<groupId>org.junit.vintage</groupId>
 			<artifactId>junit-vintage-engine</artifactId>
+			<version>5.9.2</version>
 			<scope>test</scope>
 			<exclusions>
 				<exclusion>
@@ -55,6 +57,31 @@
 					<artifactId>hamcrest-core</artifactId>
 				</exclusion>
 			</exclusions>
+		</dependency>
+        <dependency>
+            <groupId>org.defne.samples</groupId>
+            <artifactId>hotel-services</artifactId>
+            <version>1.0.1</version>
+        </dependency>
+		<dependency>
+			<groupId>org.defne.samples</groupId>
+			<artifactId>hotel-war</artifactId>
+			<version>1.0.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.defne.samples</groupId>
+			<artifactId>hotel-ear</artifactId>
+			<version>1.0.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.defne.samples</groupId>
+			<artifactId>hotel-ejb</artifactId>
+			<version>1.0.1</version>
+		</dependency>
+		<dependency>
+			<groupId>io.github.jamesfchen</groupId>
+			<artifactId>hotel-lint</artifactId>
+			<version>1.0.0</version>
 		</dependency>
 	</dependencies>
 

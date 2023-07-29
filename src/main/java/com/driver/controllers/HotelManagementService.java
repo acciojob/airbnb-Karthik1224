@@ -1,11 +1,10 @@
-package com.driver.Services;
+package com.driver.controllers;
 
-import com.driver.Repository.HotelManagementRepository;
+import com.driver.controllers.HotelManagementRepository;
 import com.driver.model.Booking;
 import com.driver.model.Facility;
 import com.driver.model.Hotel;
 import com.driver.model.User;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
